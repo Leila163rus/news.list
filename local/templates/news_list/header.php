@@ -1,26 +1,22 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?
+<?php if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title><?$APPLICATION->ShowTitle()?></title>
-	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.ico" />
+	<title><?php $APPLICATION->ShowTitle()?></title>
+	<link rel="shortcut icon" type="image/x-icon" href="<?=SITE_TEMPLATE_PATH?>/favicon.604825ed.ico" />
   <link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/assets/common.css" />
 
-  <?$APPLICATION->ShowHead();?>
+  <?php $APPLICATION->ShowHead();?>
 		
 </head>
 <body>
-	<div id="panel"><?$APPLICATION->ShowPanel();?></div>
+	<div id="panel"><?php $APPLICATION->ShowPanel();?></div>
 				
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"", 
-	array(
-		"ROOT_MENU_TYPE" => "top",
+<?php $APPLICATION->IncludeComponent("bitrix:news.list", "", array(
 		"MAX_LEVEL" => "2",
 		"CHILD_MENU_TYPE" => "left",
 		"USE_EXT" => "Y",
@@ -91,8 +87,29 @@ IncludeTemplateLangFile(__FILE__);
 	),
 	false,
 	array(
-		"ACTIVE_COMPONENT" => "Y"
+	"ACTIVE_COMPONENT" => "N"
 	)
-);?>
+);
+$APPLICATION->IncludeComponent(
+	"bitrix:form.result.new", 
+	"template", 
+	array(
+		"WEB_FORM_ID" => "1",
+		"IGNORE_CUSTOM_TEMPLATE" => "Y",
+		"USE_EXTENDED_ERRORS" => "Y",
+		"SEF_MODE" => "Y",
+		"SEF_FOLDER" => "/local/templates/news_list/",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600",
+		"LIST_URL" => "",
+		"EDIT_URL" => "",
+		"SUCCESS_URL" => "",
+		"CHAIN_ITEM_TEXT" => "",
+		"CHAIN_ITEM_LINK" => "",
+		"COMPONENT_TEMPLATE" => "template"
+	),
+	false
+);
+?>
 		
   
