@@ -1,6 +1,6 @@
 <?php
 $arUrlRewrite=array (
-  0 => 
+  1 => 
   array (
     'CONDITION' => '#^\\/?\\/mobileapp/jn\\/(.*)\\/.*#',
     'RULE' => 'componentName=$1',
@@ -8,28 +8,20 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/mobileapp/jn.php',
     'SORT' => 100,
   ),
-  4 => 
+  3 => 
   array (
-    'CONDITION' => '#^/local/templates/news_list/#',
-    'RULE' => '',
-    'ID' => 'bitrix:form.result.new',
-    'PATH' => '/local/templates/news_list/header.php',
+    'CONDITION' => '#^/news/([0-9]+)/#',
+    'RULE' => 'ELEMENT_ID=$1',
+    'ID' => '',
+    'PATH' => '/news/news_detail.php',
     'SORT' => 100,
   ),
-  1 => 
+  2 => 
   array (
     'CONDITION' => '#^/rest/#',
     'RULE' => '',
     'ID' => NULL,
     'PATH' => '/bitrix/services/rest/index.php',
-    'SORT' => 100,
-  ),
-  3 => 
-  array (
-    'CONDITION' => '#^/news/#',
-    'RULE' => '',
-    'ID' => 'bitrix:form.result.new',
-    'PATH' => '/news/index.php',
     'SORT' => 100,
   ),
 );

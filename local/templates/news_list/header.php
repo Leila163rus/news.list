@@ -15,63 +15,56 @@ IncludeTemplateLangFile(__FILE__);
 </head>
 <body>
 	<div id="panel"><?php $APPLICATION->ShowPanel();?></div>
-				
-<?php $APPLICATION->IncludeComponent("bitrix:news.list", "", array(
-		"MAX_LEVEL" => "2",
-		"CHILD_MENU_TYPE" => "left",
-		"USE_EXT" => "Y",
-		"MENU_CACHE_TYPE" => "A",
-		"MENU_CACHE_TIME" => "36000000",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"MENU_CACHE_GET_VARS" => "",
-		"COMPONENT_TEMPLATE" => "template.php",
+<?php
+/*$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	".default", 
+	array(
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"AJAX_MODE" => "Y",
 		"IBLOCK_TYPE" => "news",
 		"IBLOCK_ID" => "1",
-		"NEWS_COUNT" => "6",
-		"SORT_BY1" => "SORT",
-		"SORT_ORDER1" => "DESC",
-		"SORT_BY2" => "SORT",
-		"SORT_ORDER2" => "ASC",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "",
+		"SORT_ORDER1" => "",
+		"SORT_BY2" => "",
+		"SORT_ORDER2" => "",
 		"FILTER_NAME" => "",
 		"FIELD_CODE" => array(
-			0 => "ID",
+			0 => "",
 			1 => "",
 		),
 		"PROPERTY_CODE" => array(
-			0 => "link",
-			1 => "data-attribute",
-			2 => "",
+			0 => "",
+			1 => "",
 		),
 		"CHECK_DATES" => "Y",
-		"DETAIL_URL" => "",
-		"AJAX_MODE" => "Y",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "36000000",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"DETAIL_URL" => "#SITE_DIR#news.php?#ELEMENT_ID#",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"SET_TITLE" => "Y",
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_META_KEYWORDS" => "Y",
 		"SET_META_DESCRIPTION" => "Y",
-		"SET_LAST_MODIFIED" => "N",
+		"SET_LAST_MODIFIED" => "Y",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "Y",
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"INCLUDE_SUBSECTIONS" => "Y",
-		"STRICT_SECTION_CHECK" => "N",
-		"PAGER_TEMPLATE" => ".default",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "3600",
+		"CACHE_FILTER" => "Y",
+		"CACHE_GROUPS" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_BOTTOM_PAGER" => "N",
 		"PAGER_TITLE" => "Новости",
 		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
 		"PAGER_SHOW_ALL" => "N",
@@ -79,37 +72,19 @@ IncludeTemplateLangFile(__FILE__);
 		"SET_STATUS_404" => "Y",
 		"SHOW_404" => "Y",
 		"MESSAGE_404" => "",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"PAGER_BASE_LINK" => "",
+		"PAGER_PARAMS_NAME" => "arrPager",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"COMPONENT_TEMPLATE" => ".default",
+		"STRICT_SECTION_CHECK" => "N",
 		"FILE_404" => ""
 	),
 	false,
 	array(
-	"ACTIVE_COMPONENT" => "N"
+		"ACTIVE_COMPONENT" => "Y"
 	)
 );
-$APPLICATION->IncludeComponent(
-	"bitrix:form.result.new", 
-	"template", 
-	array(
-		"WEB_FORM_ID" => "1",
-		"IGNORE_CUSTOM_TEMPLATE" => "Y",
-		"USE_EXTENDED_ERRORS" => "Y",
-		"SEF_MODE" => "Y",
-		"SEF_FOLDER" => "/local/templates/news_list/",
-		"CACHE_TYPE" => "A",
-		"CACHE_TIME" => "3600",
-		"LIST_URL" => "",
-		"EDIT_URL" => "",
-		"SUCCESS_URL" => "",
-		"CHAIN_ITEM_TEXT" => "",
-		"CHAIN_ITEM_LINK" => "",
-		"COMPONENT_TEMPLATE" => "template"
-	),
-	false
-);
-?>
-		
-  
+?>*/

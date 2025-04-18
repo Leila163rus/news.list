@@ -6,4 +6,3 @@ $APPLICATION->SetPageProperty("keywords", "новости");
 $APPLICATION->SetPageProperty("description", "Новости");
 $APPLICATION->SetTitle("Новости банка");
 ?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
